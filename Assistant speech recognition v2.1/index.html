@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+ <head>
+   <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@600&family=Rubik:wght@300&family=Sora:wght@500&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
+   <link href="style.css" rel="stylesheet">
+   <link href="responsive.css" rel="stylesheet">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Assistant</title>
+ </head>
+ <body>
+ <main>
+  <header id="top">
+    <img src="images/logo.png" id="logo" alt="logo">
+    <nav>
+    <ul id="second">
+     <li><a href="#voiceToText">Speech to text</a></li>
+	 <li><a href="#voiceSearch">Voice search</a></li>
+	 <li><a href="#" onclick=popshow()>About</a></li>
+    </ul>
+   </nav>
+  </header>
+  <section id="header">
+   <div id="left">
+    <div id="about">
+     <h1 id="voice">Voice Recognition</h1>
+     <p id="intro">Acomplish your everyday tasks,<br>just by using your voice.<br>Ready to make your life easier?</p>
+	 <div id="getStarted">
+      <p id="started" onclick=popshow()>Get started</p>
+	 </div>
+    </div>
+   </div>
+   <div id="right">
+    <img id="ill"src="images/illustration.svg">
+   </div>
+  </section>
+  <section id ="voiceToText">
+	<div class="instructions" id="textConversion">
+	 <h1 id="heading">Speech to text</h1>
+	 <p>No need to type, Just speak and I'll make it text.</p>
+	 <button id="go" onclick=text()>Go</button>
+	</div>
+    <div id="text">
+	 <div id="textArea">
+	  <p id="convertedText"></p>
+	  </div>
+	  <div id="textControlls">
+	   <button id="start" onclick=start(1)>Start</button>
+	   <button id="stop" onclick=rec.stop()>Stop</button>
+	   <button id="clear" onclick=erase()>Clear</button>
+	   <button id="exit" onclick=textexit()>Exit</button>
+	  </div>
+	</div>
+  </section>
+  <section id ="voiceSearch">
+	<div class="instructions" id="searchContainer">
+	 <h1 id="heading">Voice Search</h1>
+	 <p>Typeless searching was never so easy :)</p>
+	 <button id="go" onclick=search()>Go</button>
+	</div>
+    <div id="search">
+	 <p>Please click on the microphone to start</p>
+	  <iframe src=""" id="searchWindow"></iframe>
+	  <div id ="search-controls">
+	   <img class="mic" src="images/mic.png" alt="microphone" id="searchIcon" onclick=start(2)>
+	   <button id="search-exit" onclick=searchexit()>&times;</button>
+	</div>
+  </section>
+  </main>
+  <section id="pop">
+    <img src="images/logo.png" alt="logo" id="pop_logo">
+    <h1>Speech Recognition</h1>
+    <p>Why to waste your time typing, when you have your assistant to make your life easier.<br>
+	At present it has the following features.<p>
+    <ol>
+     <li><b>Speech to text:</b> This converts whatever you speak in the form of text.</li>
+	 <li><b>voice Search:</b> This helps you for searching without typing.</li>
+    </ol>
+    <button onclick=pophide()>Got it</button>
+  </section>
+   <section id="error">
+    <img src="images/logo.png" alt="logo" id="error_logo">
+     <h1>Error!</h1>
+     <p id="error-mssg">please check your network connection and try again.<p>
+	 <p id="error-suggestion"><p>
+     <button onclick=errorhide()>Got it</button>
+  </section>
+  <section id="loading">
+    <div id="bar1"></div>
+    <div id="bar2"></div>
+    <div id="bar3"></div>
+	<div id="bar4"></div>
+	<div id="bar5"></div>
+	<div id="bar6"></div>
+	<div id="bar7"></div>
+	<div id="bar8"></div>
+  </section>
+  <img src="images/listening.gif" id="listening">
+  <script src="app.js"></script>
+  <footer>
+   <div id="footer">
+    <img src="images/logo.png"  alt="logo">
+	<i class="fa fa-linkedin-square" aria-hidden="true"></i>
+	<h2>Thank you for choosing me as your assistant <span>&#10084;</span><h2>
+	<p>Made by SNEHASISH</p>
+	<div id="social">
+	 <a href="https://www.instagram.com/snehasish_pati/" target="_blank"><img src="images/instagram.png"></a>
+	 <a  href="https://in.linkedin.com/in/snehashis-pati-536bb81aa" target="_blank"><img src="images/linkedin.png" ></a>
+	</div>
+   </div>
+</footer>
+ </body>
+</html>
